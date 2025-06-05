@@ -32,8 +32,8 @@ rows = []
 for date, title in zip(df['date'], df['title']):
     tokens = re.findall(r'\b\w+\b', title.lower())
     for word in tokens:
-        if word in ["palestine", "palestinian", "palestinians"]:
-            word = "palestine"  # normalize to one form
+        if word in ["palestinian", "palestinians"]:
+            word = "palestinians"  # normalize to one form
         if word in ["attack", "attacks"]:
             word = "attacks"
     if word not in custom_stopwords:
